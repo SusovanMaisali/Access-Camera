@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Open camera</title>
+</head>
+
+<body>
+    <video></video>
+    <script>
+        const video = document.querySelector('video');
+        navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+            video.srcObject = stream;
+            video.play()
+        })
+    </script>
+</body>
+
+</html>
